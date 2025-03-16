@@ -1,7 +1,7 @@
 import { Box, Button, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar } from '@mui/material';
 import { Calendar, Courthouse, Home2, User } from 'iconsax-react';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const SaidBar = () => {
     const [selectedItem, setSelectedItem] = useState("Accueil")
@@ -12,7 +12,10 @@ const SaidBar = () => {
         { text: "Profile", icon: (color) => <User size={24} color={color} variant="Bold" />,link:"/profile"},
     ]
     const drawerWidth = 240
-
+      const navigate=useNavigate()
+      const handleDéconnexion = () => {
+        navigate("/login")
+      }
     return (
         <div>
             <Drawer
@@ -71,6 +74,7 @@ const SaidBar = () => {
                     <Box sx={{ mt: "auto", p: 2 }}>
                         <Button
                             variant="contained"
+                            onClick={handleDéconnexion}
                             fullWidth
                             sx={{
                                 backgroundColor: "#e6e6fa",

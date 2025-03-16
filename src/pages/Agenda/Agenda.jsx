@@ -1,10 +1,7 @@
-"use client"
-
 import { useState } from "react"
 import { Box, Container, Typography, IconButton, Paper, Grid } from "@mui/material"
 import { ArrowLeft2, ArrowRight2 } from "iconsax-react"
-
-export default function Test() {
+export default function Agenda() {
   const [currentWeekStart, setCurrentWeekStart] = useState(new Date(2025, 1, 17)) // 17 février 2025 (lundi)
 
   const [events, setEvents] = useState([

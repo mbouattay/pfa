@@ -11,6 +11,7 @@ import Inscrit from './pages/Inscrit/Inscrit'
 import CourseDetails from './pages/mesCourse/mesCourse'
 import Test from './pages/test/test'
 import Profile from './pages/Profile/Profile'
+import Agenda from './pages/Agenda/Agenda'
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
             <Route path='/inscrit' element={<Inscrit />} />
             <Route path='/mecCourse'  element={<CourseDetails/>}/>
             <Route path='/profile' element={<Profile/>}/>
-            <Route path='/test' element={<Test/>}/>
+            <Route path='/agenda' element={<Agenda/>}/>
           </Route>
           
           <Route path='/login' element={<Login />} />
